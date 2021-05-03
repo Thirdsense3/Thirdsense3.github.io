@@ -1,28 +1,207 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title> - Articles</title>
+    <description>프로그래머가 되기 위한 나의 노력을 담은 블로그</description>
     <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
+    https://Thirdsense3.github.io</link>
+    
+      
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <title>1965번 상자넣기 - Silver 2</title>
+        
+          <description>&lt;h2 id=&quot;상자-넣기-1965번&quot;&gt;상자 넣기 1965번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 29 Apr 2021 15:32:00 +0000</pubDate>
         <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        https://Thirdsense3.github.io/acmicpc-Num_1965</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_1965</guid>
       </item>
-      {% endunless %}
-    {% endfor %}
+      
+    
+      
+      <item>
+        <title>9252번 LCS2 - Gold 5</title>
+        
+          <description>&lt;h2 id=&quot;lcs2-9252번&quot;&gt;LCS2 9252번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Apr 2021 21:46:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_9252</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_9252</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>2225번 합분해 - Gold 5</title>
+        
+          <description>&lt;h2 id=&quot;합분해-2225번&quot;&gt;합분해 2225번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Apr 2021 21:46:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_2225</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_2225</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>5213번 과외맨 - Gold 3</title>
+        
+          <description>&lt;h2 id=&quot;과외맨-5213번&quot;&gt;과외맨 5213번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 28 Apr 2021 21:46:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_5213</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_5213</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>2529번 부등호 - Silver 2</title>
+        
+          <description>&lt;h2 id=&quot;부등호-2529번&quot;&gt;부등호 2529번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Apr 2021 21:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_2529</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_2529</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1931번 회의실 배정 - Silver 2</title>
+        
+          <description>&lt;h2 id=&quot;회의실-배정-1931번&quot;&gt;회의실 배정 1931번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Apr 2021 21:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_1931</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_1931</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>11047번 동전 0 - Silver 2</title>
+        
+          <description>&lt;h2 id=&quot;동전-0-11047번&quot;&gt;동전 0 11047번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 19 Apr 2021 21:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_11047</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_11047</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>14503번 로봇 청소기 - Gold 5</title>
+        
+          <description>&lt;h2 id=&quot;로봇-청소기-14503번&quot;&gt;로봇 청소기 14503번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sat, 17 Apr 2021 12:15:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_14503</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_14503</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>1520번 내리막 길 - Gold 4</title>
+        
+          <description>&lt;h2 id=&quot;내리막-길-1520번&quot;&gt;내리막 길 1520번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Fri, 16 Apr 2021 19:44:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_1520</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_1520</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>자료구조란 무엇인가</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;자료구조 포스트 목차 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./datastructure-basic&quot;&gt;자료구조 (1) - Data_Structure 기본&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./datastructure-control-statement&quot;&gt;자료구조 (2) - Data_Structure&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 16 Aug 2020 15:00:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/datastructure-basic</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/datastructure-basic</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C++ Post 메모</title>
+        
+          <description>
+</description>
+        
+        <pubDate>Mon, 15 Jun 2020 19:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/daily</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/daily</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C++ Post 메모</title>
+        
+          <description>&lt;h2 id=&quot;c-연습용-텍스트-출력&quot;&gt;C++ 연습용 텍스트 출력&lt;/h2&gt;
+</description>
+        
+        <pubDate>Mon, 15 Jun 2020 19:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/cpp-basic.md</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/cpp-basic.md</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>5419번 북서풍 - Platinum 4</title>
+        
+          <description>&lt;h2 id=&quot;북서풍-5419번&quot;&gt;북서풍 5419번&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 15 Jun 2020 19:14:00 +0000</pubDate>
+        <link>
+        https://Thirdsense3.github.io/acmicpc-Num_5419</link>
+        <guid isPermaLink="true">https://Thirdsense3.github.io/acmicpc-Num_5419</guid>
+      </item>
+      
+    
   </channel>
 </rss>
