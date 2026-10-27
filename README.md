@@ -28,10 +28,10 @@ python3 -m http.server 8000
 
 개인 프로젝트와 개발 기록은 정적 HTML로 관리합니다. GitHub API를 브라우저에서 호출하지 않으며 인증 정보가 필요하지 않습니다.
 
-- 대상: 공개 저장소 [homeTrend](https://github.com/Thirdsense3/homeTrend)
+- 대상: 공개 저장소 [homeTrend](https://github.com/Thirdsense3/homeTrend), 비공개 개인 프로젝트 `invest_quant`와 `lotto-random`의 이름·개요
 - 확인일: 2026-10-28. README, package.json, 로드맵과 PR #28·#31·#33을 대조했습니다.
 - 운영 중인 서비스와 병합된 기능, 확인일 기준 진행 중인 PR을 구분해서 소개합니다. 상태를 갱신할 때는 화면의 확인일도 함께 바꿉니다.
 - 이미지: homeTrend 공개 저장소의 `public/og.png`를 `assets/portfolio/hometrend.png`에 보관했습니다.
-- 비공개 저장소의 이름·내용·링크는 포함하지 않았습니다.
+- 비공개 프로젝트는 소유자가 공개를 허용한 이름과 개요만 소개합니다. README에서 목적을 확인해 요약했으며, 코드·설정·내부 데이터·성과 수치·저장소 링크는 포함하지 않았습니다.
 
 프로젝트를 추가할 때 `index.html`의 `#projects` 영역에 공개 소개 문구와 서비스/저장소 링크를 추가하고, 필요하면 `about/index.html`의 소개도 갱신합니다.

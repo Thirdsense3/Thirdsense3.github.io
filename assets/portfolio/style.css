@@ -61,3 +61,23 @@
   .progress-item p { margin-bottom: 17px; }
   .project-history { font-size: 10px; gap: 9px; }
 }
+
+/* Overview-only introductions for personal research projects. */
+.project-lab { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.project-lab-label { margin-bottom: 19px; color: var(--muted); font-size: 10px; letter-spacing: .04em; }
+.lab-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.lab-card { display: flex; flex-direction: column; padding: 30px 32px; border: 1px solid var(--line); background: #f9faf6; }
+.lab-status { flex-shrink: 0; letter-spacing: 0; }
+.lab-card h3 { margin: 23px 0 10px; font-size: 30px; font-weight: 550; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.lab-card .lab-subtitle { color: var(--ink); font-size: 16px; letter-spacing: -.035em; margin-bottom: 15px; }
+.lab-card > p { color: var(--muted); font-size: 13px; line-height: 1.95; }
+.lab-card .tags { margin-top: auto; padding-top: 24px; }
+@media (max-width: 700px) {
+  .lab-grid { grid-template-columns: 1fr; gap: 16px; }
+  .lab-card { padding: 25px 23px; }
+  .lab-card h3 { font-size: 28px; }
+  .lab-card > p { font-size: 12px; }
+  .lab-card .lab-subtitle { font-size: 15px; }
+  .lab-card .project-meta { flex-wrap: wrap; }
+  .project-lab-label { font-size: 9px; }
+}
