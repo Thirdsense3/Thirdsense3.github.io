@@ -1,60 +1,548 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f6f2">
-  <title>명석현 — Backend Engineer</title>
-  <meta name="description" content="데이터로 원인을 끝까지 추적하는 백엔드 개발자 명석현. 실시간 데이터 처리, 성능 최적화, 안정적인 시스템을 만드는 과정과 기록입니다.">
-  <link rel="canonical" href="https://thirdsense3.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="명석현 — 데이터로 원인을 끝까지 추적하는 개발자">
-  <meta property="og:description" content="실시간 데이터 처리부터 성능 최적화까지. 백엔드 개발자 명석현의 경험과 기술 기록.">
-  <meta property="og:url" content="https://thirdsense3.github.io/">
-  <link rel="icon" href="/assets/portfolio/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/portfolio/style.css">
-  <script src="/assets/portfolio/main.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">본문으로 이동</a>
-  <header class="site-header">
-    <a class="wordmark" href="/" aria-label="명석현 홈">seokhyun<span class="brand-dot">.</span></a>
-    <nav aria-label="주 메뉴"><a href="#work">Work</a><a href="#about">About</a><a href="#notes">Notes</a><a class="nav-contact" href="#contact">Connect <span aria-hidden="true">↗</span></a></nav>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> BACKEND ENGINEER · SEOKHYUN MYUNG</div>
-      <h1 id="hero-title">복잡한 시스템에서<br>문제의 <span class="hero-emphasis">본질</span>을 찾습니다<span class="title-dot">.</span></h1>
-      <div class="hero-bottom"><p>데이터로 원인을 끝까지 추적하는 개발자, <strong>명석현</strong>입니다.<br>실시간 데이터의 흐름을 설계하고, 더 빠르고 안정적인 서비스를 만듭니다.</p><a class="text-link" href="#work">어떤 문제를 풀었는지 <span aria-hidden="true">↓</span></a></div>
-      <div class="hero-foot"><span>JAVA / SPRING / DISTRIBUTED SYSTEMS</span><span>BUILD. OBSERVE. IMPROVE.</span></div>
-    </section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f2" />
+    <title>명석현 — Backend Developer</title>
+    <meta
+      name="description"
+      content="데이터로 원인을 끝까지 추적하는 백엔드 개발자 명석현. 실시간 데이터 처리와 성능 최적화 경험, 직접 만들고 운영하는 개인 프로젝트를 소개합니다."
+    />
+    <link rel="canonical" href="https://thirdsense3.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="명석현 — 데이터로 원인을 끝까지 추적하는 개발자"
+    />
+    <meta
+      property="og:description"
+      content="직접 만들고 운영하는 개인 프로젝트와 백엔드 엔지니어링 경험, 기술 기록."
+    />
 
-    <section class="intro section-grid" aria-labelledby="intro-title">
-      <div class="section-label"><span>01 / PERSPECTIVE</span><h2 id="intro-title">만들고, 관찰하고,<br> 끝까지 개선합니다.</h2></div>
-      <div class="intro-copy"><p class="lead">기능을 완성하는 것에서 멈추지 않고,<br>서비스가 실제로 잘 동작하는지 묻습니다.</p><p>현대오토에버에서 스마트 팩토리 BI 플랫폼의 초기 개발부터 운영까지 참여했습니다. 공장의 데이터가 서비스에 도달하는 흐름을 설계하고, 병목을 분석하며, 시스템의 안정성을 높이는 일을 해왔습니다.</p><p>빠른 대응이 필요한 순간에는 우선순위를 정해 문제를 해결합니다. 이후에는 원인을 돌아보고 구조를 개선해, 같은 문제가 반복되지 않도록 합니다.</p><div class="principles"><span>데이터로 확인하기</span><span>구조로 해결하기</span><span>운영까지 책임지기</span></div></div>
-    </section>
+    <meta
+      property="og:image"
+      content="https://thirdsense3.github.io/assets/portfolio/social-card.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="명석현 — 데이터로 원인을 끝까지 추적하는 백엔드 개발자"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://thirdsense3.github.io/assets/portfolio/social-card.png"
+    />
+    <meta property="og:url" content="https://thirdsense3.github.io/" />
+    <link
+      rel="icon"
+      href="/assets/portfolio/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="/assets/portfolio/style.css" />
+    <script src="/assets/portfolio/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 이동</a>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="명석현 홈"
+        >seokhyun<span class="brand-dot">.</span></a
+      >
+      <nav aria-label="주 메뉴">
+        <a href="#projects">Projects</a><a href="#work">Work</a
+        ><a href="#about">About</a><a href="#notes">Notes</a
+        ><a class="nav-contact" href="#contact"
+          >Connect <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">
+          <span class="status-dot" aria-hidden="true"></span> BACKEND DEVELOPER
+          · SEOKHYUN MYUNG
+        </div>
+        <h1 id="hero-title">
+          복잡한 시스템에서<br />
+          문제의 <span class="hero-emphasis">본질</span>을 찾습니다<span
+            class="title-dot"
+            >.</span
+          >
+        </h1>
+        <div class="hero-bottom">
+          <p>
+            데이터로 원인을 끝까지 추적하는 개발자,
+            <strong>명석현</strong>입니다.<br />
+            실시간 데이터의 흐름을 설계하고, 개인 프로젝트로 데이터가 쓰이는
+            경험까지 만듭니다.
+          </p>
+          <a class="text-link" href="#projects"
+            >지금 만드는 프로젝트 <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="hero-foot">
+          <span>JAVA / SPRING / DATA SYSTEMS</span
+          ><span>BUILD. OBSERVE. IMPROVE.</span>
+        </div>
+      </section>
 
-    <section id="work" class="work-section" aria-labelledby="work-title">
-      <div class="section-heading"><div><span class="section-kicker">02 / SELECTED WORK</span><h2 id="work-title">문제를 풀어온 방식</h2></div><p>스마트 팩토리 BI 플랫폼에서의 엔지니어링 경험</p></div>
-      <article class="featured-work">
-        <div class="featured-copy"><div class="case-label">CASE 01 <span>REAL-TIME SYSTEMS</span></div><h3>데이터의 흐름을 바꿔,<br>응답의 지연을 줄이다.</h3><p>사용자가 늘고 호출이 잦아지면서 동기 응답 구조의 병목이 드러났습니다. WebFlux와 gRPC Async Stub을 조합한 비동기 스트리밍 구조로 전환하고, WebSocket으로 클라이언트에 데이터를 전달했습니다.</p><div class="result"><strong>30–60<span>%</span></strong><div>응답 시간 개선<small>기존 동기 응답 구조 대비</small></div></div><div class="tags"><span>Spring WebFlux</span><span>gRPC</span><span>WebSocket</span></div></div>
-        <div class="flow-panel" role="img" aria-label="데이터 서비스에서 gRPC 비동기 스트림을 거쳐 WebFlux와 WebSocket으로 다수의 클라이언트에 데이터를 전달하는 개념도"><div class="diagram-caption">ARCHITECTURE STUDY <span>01—03</span></div><div class="flow-node"><span class="node-symbol">↳</span><div><small>01 / SOURCE</small><strong>Data service</strong></div><span class="node-state">STREAM</span></div><div class="flow-line"><span>gRPC · Async Stub</span></div><div class="flow-node flow-node-accent"><span class="node-symbol">⇄</span><div><small>02 / RELAY</small><strong>Reactive stream</strong></div><span class="live-dot"></span></div><div class="flow-line"><span>WebSocket · Session management</span></div><div class="flow-clients"><span>Client 01</span><span>Client 02</span><span>Client N</span></div><p class="diagram-note">데이터 전달 흐름을 단순화한 개념도</p></div>
-      </article>
-      <div class="case-grid">
-        <article class="case-card"><div class="case-label">CASE 02 <span>DATA PIPELINE</span></div><h3>수백만 건의 데이터,<br>처리 흐름부터 설계하다.</h3><p>Kafka 단일 메시지 처리를 Batch Listener로 개선하고, 파티션과 리스너 동시성을 조정했습니다. 다중 DB 환경에서는 트랜잭션 매니저를 분리하고 실패 시 재처리 전략을 적용했습니다.</p><div class="case-outcome"><span>처리 규모</span><strong>일일 수백만 건</strong></div><div class="tags"><span>Kafka / MSK</span><span>Spring Kafka</span><span>Multi-DB</span></div><details><summary>설계에서 고려한 점 <span aria-hidden="true">+</span></summary><p>처리량뿐 아니라 데이터 정합성과 실패 이후의 복구를 함께 고려했습니다. 여러 메시지를 묶어 수신하는 구조로 바꾸고, DB별 처리 흐름에 맞춰 트랜잭션과 Retry / Dead Letter 전략을 구성했습니다.</p></details></article>
-        <article class="case-card"><div class="case-label">CASE 03 <span>RELIABILITY</span></div><h3>등록은 됐는데,<br>왜 알람이 실행되지 않을까.</h3><p>긴 주기 알람에서 실행 누락이 집중되는 패턴을 찾았습니다. 스케줄 등록 상태와 실행 로그를 대조해 스레드 풀 포화를 확인하고, 풀 크기와 동시 실행 여력을 조정했습니다.</p><div class="case-outcome"><span>개선 결과</span><strong>누락 알람 실행 정상화</strong></div><div class="tags"><span>Spring Batch</span><span>Scheduler</span><span>Thread Pool</span></div><details><summary>원인을 좁혀간 과정 <span aria-hidden="true">+</span></summary><p>ScheduledFuture 생성은 정상이었지만 짧은 주기 작업만 반복 실행되고 있었습니다. 작업 등록과 실제 실행을 구분해 관찰하고, 짧은 주기 작업이 스레드를 점유하는 상황을 분석해 적체를 완화했습니다. 조정 후 테스트에서 문제가 재현되지 않음을 확인했습니다.</p></details></article>
-      </div>
-    </section>
+      <section class="intro section-grid" aria-labelledby="intro-title">
+        <div class="section-label">
+          <span>01 / PERSPECTIVE</span>
+          <h2 id="intro-title">
+            만들고, 관찰하고,<br />
+            끝까지 개선합니다.
+          </h2>
+        </div>
+        <div class="intro-copy">
+          <p class="lead">
+            기능을 완성하는 것에서 멈추지 않고,<br />
+            서비스가 실제로 잘 동작하는지 묻습니다.
+          </p>
+          <p>
+            현대오토에버에서 스마트 팩토리 BI 플랫폼의 초기 개발부터 운영까지
+            참여했습니다. 공장의 데이터가 서비스에 도달하는 흐름을 설계하고,
+            병목을 분석하며, 시스템의 안정성을 높이는 일을 해왔습니다.
+          </p>
+          <p>
+            빠른 대응이 필요한 순간에는 우선순위를 정해 문제를 해결합니다.
+            이후에는 원인을 돌아보고 구조를 개선해, 같은 문제가 반복되지 않도록
+            합니다.
+          </p>
+          <div class="principles">
+            <span>데이터로 확인하기</span><span>구조로 해결하기</span
+            ><span>운영까지 책임지기</span>
+          </div>
+        </div>
+      </section>
 
-    <section id="about" class="about-section section-grid" aria-labelledby="about-title">
-      <div class="section-label"><span>03 / BACKGROUND</span><h2 id="about-title">기획에서 개발로,<br> 개발에서 운영으로.</h2><p>서비스의 전체 흐름을 이해하며<br>백엔드의 깊이를 더하고 있습니다.</p></div>
-      <div class="background-content"><div class="timeline-row"><div class="timeline-date">2022.07 — 현재</div><div><h3>현대오토에버</h3><span class="role">Backend Developer</span><p>현대·기아 글로벌 공장의 공정 데이터를 다루는 스마트 팩토리 BI 웹 서비스 개발. MSA·EKS 환경 설계, 데이터 처리, API 최적화와 운영 모니터링을 담당했습니다.</p></div></div><div class="timeline-row"><div class="timeline-date">2021.07 — 2022.06</div><div><h3>현대오토에버</h3><span class="role">Project Manager / Backend Developer</span><p>현대자동차 싱가포르 공장 웹 기획과 협력사 개발 관리, 시스템 간 데이터 규격 표준화, 공장 모니터링 대시보드 기획을 담당했습니다.</p></div></div><div class="toolbox"><h3>Tools I work with</h3><dl><div><dt>Backend</dt><dd>Java · Spring Boot · WebFlux · Batch · JPA · QueryDSL</dd></div><div><dt>Data & Messaging</dt><dd>Kafka · gRPC · WebSocket · MySQL · MariaDB · Caffeine</dd></div><div><dt>Infrastructure</dt><dd>AWS · EKS · MSK · Kubernetes</dd></div><div><dt>Observability</dt><dd>Grafana · CloudWatch · OpenSearch · VisualVM · MAT</dd></div></dl></div><div class="education"><span>계속 배우는 중</span><p>국민대학교 소프트웨어학과 <small>2014 — 2021</small><br>Google for Developers ML Bootcamp <small>2024</small></p></div></div>
-    </section>
+      <section
+        id="projects"
+        class="projects-section"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">02 / SIDE PROJECTS & EXPERIMENTS</span>
+            <h2 id="projects-title">지금 만들고 있는 것들</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Thirdsense3?tab=repositories"
+            >GitHub 프로젝트 <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <p class="projects-intro">
+          업무에서 쌓은 데이터 처리와 운영 경험을, 일상에서 직접 쓸 수 있는
+          서비스로 이어갑니다.
+        </p>
+        <article class="project-feature" aria-labelledby="hometrend-title">
+          <a
+            class="project-cover"
+            href="https://thirdsense3.github.io/homeTrend/"
+            aria-label="homeTrend 서비스 열기"
+            ><img
+              src="/assets/portfolio/hometrend-dashboard.png"
+              alt="homeTrend의 실제 대시보드 화면. 매매·전세 가격 추이와 월별 거래량 차트를 보여줍니다."
+              width="852"
+              height="628"
+              loading="lazy"
+          /></a>
+          <div class="project-copy">
+            <div class="project-meta">
+              <span class="project-status"
+                ><span class="status-dot" aria-hidden="true"></span> 운영하며
+                개선 중</span
+              ><span>PERSONAL PROJECT</span>
+            </div>
+            <h3 id="hometrend-title">
+              homeTrend<span class="brand-dot">.</span>
+            </h3>
+            <p class="project-subtitle">
+              흩어진 주택 데이터를, 비교할 수 있는 흐름으로.
+            </p>
+            <p>
+              국토교통부 실거래 자료와 한국부동산원 통계를 모아 서울·경기
+              아파트의 가격·거래량·전세가율을 살펴보는 대시보드입니다. 수집과
+              지표 계산, 화면 구현부터 매일 데이터 갱신과 배포까지 이어지는
+              서비스를 만들고 있습니다.
+            </p>
+            <ul class="project-points">
+              <li>공개 API 수집·캐시와 지역별 시계열 지표 계산</li>
+              <li>GitHub Actions 자동 갱신, S3 거래 이력 보관</li>
+              <li>관심단지·평형 저장과 기기 간 목록 동기화</li>
+              <li>Lambda·DynamoDB 기반 API와 방문 측정</li>
+            </ul>
+            <div class="tags">
+              <span>JavaScript / Node.js</span><span>GitHub Actions</span
+              ><span>AWS SAM</span><span>Lambda · S3 · DynamoDB</span>
+            </div>
+            <div class="project-links">
+              <a
+                class="project-primary-link"
+                href="https://thirdsense3.github.io/homeTrend/"
+                >서비스 둘러보기 <span aria-hidden="true">↗</span></a
+              ><a
+                class="text-link"
+                href="https://github.com/Thirdsense3/homeTrend"
+                >코드 보기 <span aria-hidden="true">↗</span></a
+              >
+            </div>
+          </div>
+        </article>
+        <div class="project-progress">
+          <div class="progress-heading">
+            <h3>homeTrend를 개선해온 기록</h3>
+            <span>최근 작업의 배경과 변경 내용</span>
+          </div>
+          <div class="progress-grid">
+            <a
+              class="progress-item"
+              href="https://github.com/Thirdsense3/homeTrend/pull/28"
+              ><span class="progress-state">작업 기록 · #28</span>
+              <h4>관심 목록 동기화</h4>
+              <p>
+                가입 없이 코드·링크·QR로 다른 기기에서도 관심 목록을 이어볼 수
+                있도록 개선했습니다.
+              </p>
+              <span class="progress-link">변경 내용 보기 ↗</span></a
+            >
+            <a
+              class="progress-item"
+              href="https://github.com/Thirdsense3/homeTrend/pull/31"
+              ><span class="progress-state">작업 기록 · #31</span>
+              <h4>정책 타임라인</h4>
+              <p>
+                발표일·시행일과 원문을 확인할 수 있는 정책 목록, 차트 표식을
+                추가했습니다.
+              </p>
+              <span class="progress-link">변경 내용 보기 ↗</span></a
+            >
+            <a
+              class="progress-item"
+              href="https://github.com/Thirdsense3/homeTrend/pull/33"
+              ><span class="progress-state">작업 기록 · #33</span>
+              <h4>이번 달 전세 거래 표시</h4>
+              <p>
+                매매·전세 보기 분리에 이어, 신고 진행 중인 전세 거래를 표시하는
+                작업을 진행했습니다.
+              </p>
+              <span class="progress-link">변경 내용 보기 ↗</span></a
+            >
+          </div>
+          <a
+            class="project-history"
+            href="https://github.com/Thirdsense3/homeTrend/pulls"
+            >이후 개발 기록은 GitHub에서 계속 이어집니다
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="project-lab" aria-label="개인 연구 프로젝트">
+          <p class="project-lab-label">
+            PERSONAL LAB / 일상의 질문을 코드로 검증합니다
+          </p>
+          <div class="lab-grid">
+            <article class="lab-card" aria-labelledby="invest-quant-title">
+              <div class="project-meta">
+                <span>STRATEGY RESEARCH</span
+                ><span class="lab-status">비공개 · 개발 중</span>
+              </div>
+              <h3 id="invest-quant-title">
+                invest_quant<span class="brand-dot">.</span>
+              </h3>
+              <p class="lab-subtitle">
+                외부 API부터 자동 실행까지, 규칙을 시스템으로.
+              </p>
+              <p>
+                증권사 API 연동, 규칙 기반 주문의 자동 실행, 백테스트와 로컬
+                대시보드를 연결한 Python 개인 도구입니다. 중복 실행과 응답
+                실패를 다루며, 전략 검증부터 실행 상태 확인까지 이어지는 흐름을
+                만들고 있습니다.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>API Integration</span
+                ><span>Automation</span><span>Backtesting</span>
+              </div>
+            </article>
+            <article class="lab-card" aria-labelledby="lotto-random-title">
+              <div class="project-meta">
+                <span>PROBABILITY & COMBINATORICS</span
+                ><span class="lab-status">비공개 · 개발 중</span>
+              </div>
+              <h3 id="lotto-random-title">
+                lotto-random<span class="brand-dot">.</span>
+              </h3>
+              <p class="lab-subtitle">
+                무작위 조합에도, 검증할 수 있는 질문을.
+              </p>
+              <p>
+                로또 번호 조합의 중복과 커버 범위를 탐색하는 Python 실험입니다.
+                과거 빈도를 활용한 후보 생성과 조합별 확률 계산을 구분하고,
+                선택한 결과를 수학적 계산과 테스트로 검증합니다.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>Combinatorics</span
+                ><span>Probability</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="notes" class="notes-section" aria-labelledby="notes-title"><div class="section-heading"><div><span class="section-kicker">04 / LEARNING ARCHIVE</span><h2 id="notes-title">생각의 출발점, 기술 기록</h2></div><a class="text-link" href="/notes/">모든 기록 보기 <span aria-hidden="true">↗</span></a></div><p class="notes-intro">알고리즘과 자료구조를 공부하며 남긴 2020–2021년의 기록입니다.</p><a class="note-row" href="/acmicpc-Num_9252.html"><span class="note-type">ALGORITHM</span><h3>최장 공통 부분 수열, LCS2</h3><span class="note-year">2021 <span aria-hidden="true">↗</span></span></a><a class="note-row" href="/datastructure-basic.html"><span class="note-type">FUNDAMENTALS</span><h3>자료구조란 무엇인가</h3><span class="note-year">2020 <span aria-hidden="true">↗</span></span></a><a class="note-row" href="/acmicpc-Num_5419.html"><span class="note-type">ALGORITHM</span><h3>백준 5419번, 북서풍</h3><span class="note-year">2020 <span aria-hidden="true">↗</span></span></a></section>
+      <section id="work" class="work-section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">03 / SELECTED WORK</span>
+            <h2 id="work-title">문제를 풀어온 방식</h2>
+          </div>
+          <p>스마트 팩토리 BI 플랫폼에서의 엔지니어링 경험</p>
+        </div>
+        <article class="featured-work">
+          <div class="featured-copy">
+            <div class="case-label">CASE 01 <span>REAL-TIME SYSTEMS</span></div>
+            <h3>
+              데이터의 흐름을 바꿔,<br />
+              응답의 지연을 줄이다.
+            </h3>
+            <p>
+              사용자가 늘고 호출이 잦아지면서 동기 응답 구조의 병목이
+              드러났습니다. WebFlux와 gRPC Async Stub을 조합한 비동기 스트리밍
+              구조로 전환하고, WebSocket으로 클라이언트에 데이터를 전달했습니다.
+            </p>
+            <div class="result">
+              <strong>30–60<span>%</span></strong>
+              <div>응답 시간 개선<small>기존 동기 응답 구조 대비</small></div>
+            </div>
+            <div class="tags">
+              <span>Spring WebFlux</span><span>gRPC</span><span>WebSocket</span>
+            </div>
+          </div>
+          <div
+            class="flow-panel"
+            role="img"
+            aria-label="데이터 서비스에서 gRPC 비동기 스트림을 거쳐 WebFlux와 WebSocket으로 다수의 클라이언트에 데이터를 전달하는 개념도"
+          >
+            <div class="diagram-caption">
+              ARCHITECTURE STUDY <span>01—03</span>
+            </div>
+            <div class="flow-node">
+              <span class="node-symbol">↳</span>
+              <div><small>01 / SOURCE</small><strong>Data service</strong></div>
+              <span class="node-state">STREAM</span>
+            </div>
+            <div class="flow-line"><span>gRPC · Async Stub</span></div>
+            <div class="flow-node flow-node-accent">
+              <span class="node-symbol">⇄</span>
+              <div>
+                <small>02 / RELAY</small><strong>Reactive stream</strong>
+              </div>
+              <span class="live-dot"></span>
+            </div>
+            <div class="flow-line">
+              <span>WebSocket · Session management</span>
+            </div>
+            <div class="flow-clients">
+              <span>Client 01</span><span>Client 02</span><span>Client N</span>
+            </div>
+            <p class="diagram-note">데이터 전달 흐름을 단순화한 개념도</p>
+          </div>
+        </article>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-label">CASE 02 <span>DATA PIPELINE</span></div>
+            <h3>
+              수백만 건의 데이터,<br />
+              처리 흐름부터 설계하다.
+            </h3>
+            <p>
+              Kafka 단일 메시지 처리를 Batch Listener로 개선하고, 파티션과
+              리스너 동시성을 조정했습니다. 다중 DB 환경에서는 트랜잭션 매니저를
+              분리하고 실패 시 재처리 전략을 적용했습니다.
+            </p>
+            <div class="case-outcome">
+              <span>처리 규모</span><strong>일일 수백만 건</strong>
+            </div>
+            <div class="tags">
+              <span>Kafka / MSK</span><span>Spring Kafka</span
+              ><span>Multi-DB</span>
+            </div>
+            <details>
+              <summary>
+                설계에서 고려한 점 <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                처리량뿐 아니라 데이터 정합성과 실패 이후의 복구를 함께
+                고려했습니다. 여러 메시지를 묶어 수신하는 구조로 바꾸고, DB별
+                처리 흐름에 맞춰 트랜잭션과 Retry / Dead Letter 전략을
+                구성했습니다.
+              </p>
+            </details>
+          </article>
+          <article class="case-card">
+            <div class="case-label">CASE 03 <span>RELIABILITY</span></div>
+            <h3>
+              등록은 됐는데,<br />
+              왜 알람이 실행되지 않을까.
+            </h3>
+            <p>
+              긴 주기 알람에서 실행 누락이 집중되는 패턴을 찾았습니다. 스케줄
+              등록 상태와 실행 로그를 대조해 스레드 풀 포화를 확인하고, 풀
+              크기와 동시 실행 여력을 조정했습니다.
+            </p>
+            <div class="case-outcome">
+              <span>개선 결과</span><strong>누락 알람 실행 정상화</strong>
+            </div>
+            <div class="tags">
+              <span>Spring Batch</span><span>Scheduler</span
+              ><span>Thread Pool</span>
+            </div>
+            <details>
+              <summary>
+                원인을 좁혀간 과정 <span aria-hidden="true">+</span>
+              </summary>
+              <p>
+                ScheduledFuture 생성은 정상이었지만 짧은 주기 작업만 반복
+                실행되고 있었습니다. 작업 등록과 실제 실행을 구분해 관찰하고,
+                짧은 주기 작업이 스레드를 점유하는 상황을 분석해 적체를
+                완화했습니다. 조정 후 테스트에서 문제가 재현되지 않음을
+                확인했습니다.
+              </p>
+            </details>
+          </article>
+        </div>
+      </section>
 
-    <section id="contact" class="contact-section" aria-labelledby="contact-title"><div><span class="section-kicker">05 / CONNECT</span><h2 id="contact-title">좋은 질문에서,<br>다음 이야기가 시작됩니다.</h2><p>백엔드와 데이터, 더 나은 시스템에 관한 이야기를 나누고 싶습니다.</p></div><a class="contact-link" href="https://github.com/Thirdsense3">Find me on GitHub <span aria-hidden="true">↗</span></a></section>
-  </main>
-  <footer class="site-footer"><a class="wordmark" href="/">seokhyun<span class="brand-dot">.</span></a><span>© <span id="year">2026</span> Seokhyun Myung</span><a href="#main">Back to top ↑</a></footer>
-</body>
+      <section
+        id="about"
+        class="about-section section-grid"
+        aria-labelledby="about-title"
+      >
+        <div class="section-label">
+          <span>04 / BACKGROUND</span>
+          <h2 id="about-title">
+            기획에서 개발로,<br />
+            개발에서 운영으로.
+          </h2>
+          <p>
+            서비스의 전체 흐름을 이해하며<br />
+            백엔드의 깊이를 더하고 있습니다.
+          </p>
+        </div>
+        <div class="background-content">
+          <div class="timeline-row">
+            <div class="timeline-date">2022.07 — 현재</div>
+            <div>
+              <h3>현대오토에버</h3>
+              <span class="role">Backend Developer</span>
+              <p>
+                현대·기아 글로벌 공장의 공정 데이터를 다루는 스마트 팩토리 BI 웹
+                서비스 개발. MSA·EKS 환경 설계, 데이터 처리, API 최적화와 운영
+                모니터링을 담당했습니다.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-date">2021.07 — 2022.06</div>
+            <div>
+              <h3>현대오토에버</h3>
+              <span class="role">Project Manager / Backend Developer</span>
+              <p>
+                현대자동차 싱가포르 공장 웹 기획과 협력사 개발 관리, 시스템 간
+                데이터 규격 표준화, 공장 모니터링 대시보드 기획을 담당했습니다.
+              </p>
+            </div>
+          </div>
+          <div class="toolbox">
+            <h3>Tools I work with</h3>
+            <dl>
+              <div>
+                <dt>Backend</dt>
+                <dd>Java · Spring Boot · WebFlux · Batch · JPA · QueryDSL</dd>
+              </div>
+              <div>
+                <dt>Data & Messaging</dt>
+                <dd>Kafka · gRPC · WebSocket · MySQL · MariaDB · Caffeine</dd>
+              </div>
+              <div>
+                <dt>Infrastructure</dt>
+                <dd>AWS · EKS · MSK · Kubernetes</dd>
+              </div>
+              <div>
+                <dt>Observability</dt>
+                <dd>Grafana · CloudWatch · OpenSearch · VisualVM · MAT</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="education">
+            <span>계속 배우는 중</span>
+            <p>
+              국민대학교 소프트웨어학과 <small>2014 — 2021</small><br />
+              Google for Developers ML Bootcamp <small>2024</small>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes" class="notes-section" aria-labelledby="notes-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">05 / LEARNING ARCHIVE</span>
+            <h2 id="notes-title">생각의 출발점, 기술 기록</h2>
+          </div>
+          <a class="text-link" href="/notes/"
+            >모든 기록 보기 <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <p class="notes-intro">
+          알고리즘과 자료구조를 공부하며 남긴 2020–2021년의 기록입니다.
+        </p>
+        <a class="note-row" href="/acmicpc-Num_9252.html"
+          ><span class="note-type">ALGORITHM</span>
+          <h3>최장 공통 부분 수열, LCS2</h3>
+          <span class="note-year"
+            >2021 <span aria-hidden="true">↗</span></span
+          ></a
+        ><a class="note-row" href="/datastructure-basic.html"
+          ><span class="note-type">FUNDAMENTALS</span>
+          <h3>자료구조란 무엇인가</h3>
+          <span class="note-year"
+            >2020 <span aria-hidden="true">↗</span></span
+          ></a
+        ><a class="note-row" href="/acmicpc-Num_5419.html"
+          ><span class="note-type">ALGORITHM</span>
+          <h3>백준 5419번, 북서풍</h3>
+          <span class="note-year"
+            >2020 <span aria-hidden="true">↗</span></span
+          ></a
+        >
+      </section>
+
+      <section
+        id="contact"
+        class="contact-section"
+        aria-labelledby="contact-title"
+      >
+        <div>
+          <span class="section-kicker">06 / CONNECT</span>
+          <h2 id="contact-title">
+            좋은 질문에서,<br />
+            다음 이야기가 시작됩니다.
+          </h2>
+          <p>
+            백엔드와 데이터, 더 나은 시스템에 관한 이야기를 나누고 싶습니다.
+          </p>
+        </div>
+        <a class="contact-link" href="https://github.com/Thirdsense3"
+          >Find me on GitHub <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="wordmark" href="/">seokhyun<span class="brand-dot">.</span></a
+      ><span>© <span id="year">2026</span> Seokhyun Myung</span
+      ><a href="#main">Back to top ↑</a>
+    </footer>
+  </body>
 </html>
