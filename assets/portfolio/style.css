@@ -692,16 +692,23 @@ dd {
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
 }
 .project-cover {
-  display: block;
-  border-bottom: 1px solid var(--line);
-  background: #f8f9f6;
+  display: flex;
+  border-bottom: 0;
+  background: var(--wash);
+  align-items: center;
+  padding: 20px;
+  border-right: 1px solid var(--line);
 }
 .project-cover img {
   display: block;
   width: 100%;
   height: auto;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px #20282210;
 }
 .project-copy {
   padding: 34px 40px 38px;
@@ -743,7 +750,7 @@ dd {
 }
 .project-points {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 8px 26px;
   margin: 22px 0 25px;
   padding-left: 17px;
@@ -805,11 +812,11 @@ dd {
 .progress-item:hover {
   border-color: #95a786;
 }
-
 .progress-state {
   font-size: 11px;
   color: var(--green);
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 .progress-item h4 {
   margin: 13px 0 10px;
@@ -883,30 +890,6 @@ dd {
   margin-top: auto;
   padding-top: 24px;
 }
-
-.project-feature {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-}
-.project-cover {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 0;
-  border-right: 1px solid var(--line);
-  background: var(--wash);
-}
-.project-cover img {
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 24px #20282210;
-}
-.project-points {
-  grid-template-columns: 1fr;
-}
-.progress-state {
-  text-transform: uppercase;
-}
-
 @media (min-width: 1500px) {
   main,
   .site-header,
@@ -960,14 +943,12 @@ dd {
   .contact-section h2 {
     font-size: 27px;
   }
-
   .project-copy {
     padding: 29px;
   }
   .progress-item {
     padding: 19px;
   }
-
   .project-feature {
     grid-template-columns: 1fr;
   }
@@ -988,7 +969,11 @@ dd {
     width: calc(100% - 40px);
   }
   .site-header {
-    height: 83px;
+    height: auto;
+    padding: 17px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
   .wordmark {
     font-size: 24px;
@@ -1032,10 +1017,11 @@ dd {
     padding-top: 22px;
     font-size: 11px;
     letter-spacing: 0.02em;
-    gap: 15px;
+    gap: 6px;
+    flex-direction: column;
   }
   .hero-foot > span:last-child {
-    text-align: right;
+    text-align: left;
   }
   .section-grid {
     grid-template-columns: 1fr;
@@ -1099,7 +1085,8 @@ dd {
     font-size: 43px;
   }
   .result {
-    gap: 20px;
+    gap: 12px 20px;
+    flex-wrap: wrap;
   }
   .result small {
     font-size: 11px;
@@ -1236,14 +1223,6 @@ dd {
   .bio-main h1 {
     font-size: 34px;
   }
-
-  .site-header {
-    height: auto;
-    padding: 17px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
   .site-header nav {
     width: 100%;
     justify-content: space-between;
@@ -1263,6 +1242,7 @@ dd {
   .project-meta {
     font-size: 11px;
     gap: 10px;
+    flex-wrap: wrap;
   }
   .project-status {
     font-size: 11px;
@@ -1310,7 +1290,6 @@ dd {
     font-size: 11px;
     gap: 9px;
   }
-
   .lab-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1333,26 +1312,11 @@ dd {
   .project-lab-label {
     font-size: 11px;
   }
-
   .hero-bottom br,
   .intro-copy br,
   .featured-copy h3 br,
   .case-card h3 br {
     display: none;
-  }
-  .hero-foot {
-    flex-direction: column;
-    gap: 6px;
-  }
-  .hero-foot > span:last-child {
-    text-align: left;
-  }
-  .project-meta {
-    flex-wrap: wrap;
-  }
-  .result {
-    flex-wrap: wrap;
-    gap: 12px 20px;
   }
   .project-cover {
     padding: 14px;

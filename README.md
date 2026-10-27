@@ -40,7 +40,7 @@ python3 -m http.server 8000
 - 대상: 공개 저장소 [homeTrend](https://github.com/Thirdsense3/homeTrend), 비공개 개인 프로젝트 `invest_quant`와 `lotto-random`의 이름·개요
 - 확인일: 2026-10-28. README, package.json, 로드맵과 PR #28·#31·#33을 대조했습니다.
 - 개발 기록은 PR 번호와 작업 내용만 소개합니다. 자동 갱신되지 않는 OPEN/MERGED 상태는 표시하지 않으며, 링크에서 최신 진행 상태를 확인할 수 있습니다.
-- 이미지: 공개 homeTrend의 실제 대시보드 화면을 `assets/portfolio/hometrend-dashboard.png`에 보관했습니다.
+- 이미지: 공개 homeTrend의 실제 대시보드의 가격·거래량 차트 영역을 `assets/portfolio/hometrend-dashboard.png`에 보관했습니다.
 - 비공개 프로젝트는 소유자가 공개를 허용한 이름과 개요만 소개합니다. README에서 목적을 확인해 요약했으며, 코드·설정·내부 데이터·성과 수치·저장소 링크는 포함하지 않았습니다.
 
 프로젝트를 추가할 때 `index.html`의 `#projects` 영역에 공개 소개 문구와 서비스/저장소 링크를 추가하고, 필요하면 `about/index.html`의 소개도 갱신합니다.
