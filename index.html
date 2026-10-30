@@ -342,32 +342,77 @@
           </div>
           <div
             class="flow-panel"
-            role="img"
-            aria-label="데이터 서비스에서 gRPC 비동기 스트림을 거쳐 WebFlux와 WebSocket으로 다수의 클라이언트에 데이터를 전달하는 개념도"
+            data-flow-panel
           >
             <div class="diagram-caption">
-              ARCHITECTURE STUDY <span>01—03</span>
+              ARCHITECTURE STUDY <span data-flow-step>AFTER</span>
             </div>
-            <div class="flow-node">
-              <span class="node-symbol">↳</span>
-              <div><small>01 / SOURCE</small><strong>Data service</strong></div>
-              <span class="node-state">STREAM</span>
+            <div class="flow-toggle" role="group" aria-label="구조 비교" hidden>
+              <button type="button" aria-pressed="false" data-flow-mode="sync">
+                전환 전 · 동기 응답
+              </button>
+              <button type="button" aria-pressed="true" data-flow-mode="stream">
+                전환 후 · 비동기 스트림
+              </button>
             </div>
-            <div class="flow-line"><span>gRPC · Async Stub</span></div>
-            <div class="flow-node flow-node-accent">
-              <span class="node-symbol">⇄</span>
-              <div>
-                <small>02 / RELAY</small><strong>Reactive stream</strong>
+            <div
+              class="flow-view flow-view-sync"
+              data-flow-view="sync"
+              data-flow-note="요청마다 스레드가 응답을 기다리며 묶이는 구조를 단순화한 개념도"
+              role="img"
+              aria-label="클라이언트 요청마다 서버 스레드가 데이터 서비스의 응답을 기다리며 묶이고, 호출이 늘면 대기가 쌓이는 동기 응답 구조 개념도"
+              hidden
+            >
+              <div class="flow-clients">
+                <span>Client 01</span><span>Client 02</span><span>Client N</span>
               </div>
-              <span class="live-dot"></span>
+              <div class="flow-line"><span>요청마다 응답을 기다림</span></div>
+              <div class="flow-node">
+                <span class="node-symbol">⧗</span>
+                <div>
+                  <small>02 / API SERVER</small><strong>Request threads</strong>
+                </div>
+                <span class="thread-slots" aria-hidden="true"
+                  ><i></i><i></i><i></i><i></i
+                ></span>
+              </div>
+              <div class="flow-line"><span>동기 호출 · 응답까지 대기</span></div>
+              <div class="flow-node">
+                <span class="node-symbol">↳</span>
+                <div><small>01 / SOURCE</small><strong>Data service</strong></div>
+                <span class="node-state">REQUEST</span>
+              </div>
             </div>
-            <div class="flow-line">
-              <span>WebSocket · Session management</span>
+            <div
+              class="flow-view flow-view-stream"
+              data-flow-view="stream"
+              data-flow-note="하나의 스트림을 여러 클라이언트에 전달하는 흐름을 단순화한 개념도"
+              role="img"
+              aria-label="데이터 서비스에서 gRPC 비동기 스트림을 거쳐 WebFlux와 WebSocket으로 다수의 클라이언트에 데이터를 전달하는 개념도"
+            >
+              <div class="flow-node">
+                <span class="node-symbol">↳</span>
+                <div><small>01 / SOURCE</small><strong>Data service</strong></div>
+                <span class="node-state">STREAM</span>
+              </div>
+              <div class="flow-line"><span>gRPC · Async Stub</span></div>
+              <div class="flow-node flow-node-accent">
+                <span class="node-symbol">⇄</span>
+                <div>
+                  <small>02 / RELAY</small><strong>Reactive stream</strong>
+                </div>
+                <span class="live-dot"></span>
+              </div>
+              <div class="flow-line">
+                <span>WebSocket · Session management</span>
+              </div>
+              <div class="flow-clients">
+                <span>Client 01</span><span>Client 02</span><span>Client N</span>
+              </div>
             </div>
-            <div class="flow-clients">
-              <span>Client 01</span><span>Client 02</span><span>Client N</span>
-            </div>
-            <p class="diagram-note">데이터 전달 흐름을 단순화한 개념도</p>
+            <p class="diagram-note" data-flow-note>
+              데이터 전달 흐름을 단순화한 개념도
+            </p>
           </div>
         </article>
         <div class="case-grid">
