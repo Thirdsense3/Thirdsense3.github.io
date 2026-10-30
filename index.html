@@ -169,6 +169,27 @@
               지표 계산, 화면 구현부터 매일 데이터 갱신과 배포까지 이어지는
               서비스를 만들고 있습니다.
             </p>
+            <div class="live-panel" data-live-panel hidden>
+              <div class="live-head">
+                <span class="live-label"
+                  ><span class="live-dot" aria-hidden="true"></span> LIVE · 데이터
+                  갱신 상태</span
+                ><span class="live-state" data-live="state">정상</span>
+              </div>
+              <dl class="live-stats">
+                <div><dt>마지막 갱신</dt><dd data-live="built"></dd></div>
+                <div data-live-row>
+                  <dt>새로 확인된 매매</dt><dd data-live="added"></dd>
+                </div>
+                <div data-live-row>
+                  <dt>취소된 거래</dt><dd data-live="removed"></dd>
+                </div>
+              </dl>
+              <p class="live-note">
+                빌드 #<span data-live="run"></span> · homeTrend가 공개하는 데이터
+                파일을 직접 읽어 표시합니다.
+              </p>
+            </div>
             <ul class="project-points">
               <li>공개 API 수집·캐시와 지역별 시계열 지표 계산</li>
               <li>GitHub Actions 자동 갱신, S3 거래 이력 보관</li>
@@ -386,11 +407,42 @@
               등록은 됐는데,<br />
               왜 알람이 실행되지 않을까.
             </h3>
-            <p>
-              긴 주기 알람에서 실행 누락이 집중되는 패턴을 찾았습니다. 스케줄
-              등록 상태와 실행 로그를 대조해 스레드 풀 포화를 확인하고, 풀
-              크기와 동시 실행 여력을 조정했습니다.
-            </p>
+            <ol
+              class="incident-log"
+              data-incident-log
+              aria-label="원인을 좁혀간 과정"
+            >
+              <li>
+                <span class="log-step">OBSERVE</span>
+                <p>긴 주기 알람에서만 실행 누락이 집중된다.</p>
+              </li>
+              <li class="log-rejected">
+                <span class="log-step">HYPOTHESIS</span>
+                <p>
+                  스케줄 등록이 실패했나?
+                  <span class="log-verdict">ScheduledFuture 생성 정상 → 기각</span>
+                </p>
+              </li>
+              <li>
+                <span class="log-step">COMPARE</span>
+                <p>
+                  등록 상태와 실행 로그를 나눠 보니, 짧은 주기 작업만 반복
+                  실행되고 있었다.
+                </p>
+              </li>
+              <li class="log-cause">
+                <span class="log-step">ROOT CAUSE</span>
+                <p>짧은 주기 작업이 스레드를 점유해 스레드 풀이 포화됐다.</p>
+              </li>
+              <li>
+                <span class="log-step">FIX</span>
+                <p>풀 크기와 동시 실행 여력을 조정했다.</p>
+              </li>
+              <li>
+                <span class="log-step">VERIFY</span>
+                <p>조정 후 테스트에서 문제가 재현되지 않았다.</p>
+              </li>
+            </ol>
             <div class="case-outcome">
               <span>개선 결과</span><strong>누락 알람 실행 정상화</strong>
             </div>
@@ -398,18 +450,6 @@
               <span>Spring Batch</span><span>Scheduler</span
               ><span>Thread Pool</span>
             </div>
-            <details>
-              <summary>
-                원인을 좁혀간 과정 <span aria-hidden="true">+</span>
-              </summary>
-              <p>
-                ScheduledFuture 생성은 정상이었지만 짧은 주기 작업만 반복
-                실행되고 있었습니다. 작업 등록과 실제 실행을 구분해 관찰하고,
-                짧은 주기 작업이 스레드를 점유하는 상황을 분석해 적체를
-                완화했습니다. 조정 후 테스트에서 문제가 재현되지 않음을
-                확인했습니다.
-              </p>
-            </details>
           </article>
         </div>
       </section>
