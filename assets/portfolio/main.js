@@ -78,6 +78,30 @@ async function loadLiveStatus() {
 
 if (livePanel) whenNear(livePanel.closest('section'), loadLiveStatus, '400px');
 
+// CASE 01 흐름도는 전환 전(동기 응답)과 전환 후(비동기 스트림)를 바꿔 볼 수 있습니다.
+// JavaScript가 없으면 전환 후 구조만 보입니다.
+document.querySelectorAll('[data-flow-panel]').forEach((panel) => {
+  const buttons = panel.querySelectorAll('[data-flow-mode]');
+  const views = panel.querySelectorAll('[data-flow-view]');
+  const step = panel.querySelector('[data-flow-step]');
+  const note = panel.querySelector('p[data-flow-note]');
+
+  function show(mode) {
+    buttons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.flowMode === mode));
+    });
+    views.forEach((view) => {
+      view.hidden = view.dataset.flowView !== mode;
+      if (!view.hidden) note.textContent = view.dataset.flowNote;
+    });
+    step.textContent = mode === 'sync' ? 'BEFORE' : 'AFTER';
+  }
+
+  buttons.forEach((button) => button.addEventListener('click', () => show(button.dataset.flowMode)));
+  panel.querySelector('.flow-toggle').hidden = false;
+  show('stream');
+});
+
 // 장애 회고 로그는 화면에 들어올 때 한 줄씩 펼칩니다. JavaScript가 없거나
 // 움직임 줄이기 설정이면 처음부터 모두 보입니다.
 if (!reduceMotion && 'IntersectionObserver' in window) {

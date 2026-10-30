@@ -415,6 +415,124 @@ nav {
   text-align: center;
   margin-top: 22px;
 }
+
+/* CASE 01 before/after toggle: blocked request threads vs one shared stream. */
+.flow-toggle {
+  display: flex;
+  margin: -8px 0 22px;
+  border: 1px solid #d4dbcb;
+  background: var(--white);
+}
+.flow-toggle[hidden] {
+  display: none;
+}
+.flow-toggle button {
+  flex: 1;
+  padding: 8px 10px;
+  border: 0;
+  background: transparent;
+  color: #78836e;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+.flow-toggle button + button {
+  border-left: 1px solid #d4dbcb;
+}
+.flow-toggle button[aria-pressed='true'] {
+  background: var(--green);
+  color: var(--white);
+}
+.flow-toggle button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+.flow-view .flow-line {
+  position: relative;
+}
+.flow-view .flow-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  opacity: 0;
+}
+.flow-view-stream .flow-line::before {
+  animation: flow-stream 1.6s linear infinite;
+}
+.flow-view-stream .flow-line + .flow-node + .flow-line::before {
+  animation-delay: 0.8s;
+}
+.flow-view-sync .flow-line::before {
+  background: #b48a3c;
+  animation: flow-wait 2.8s ease-in-out infinite;
+}
+.thread-slots {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+.thread-slots i {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #b48a3c;
+  background: #e9d9b5;
+  animation: thread-busy 2.8s ease-in-out infinite;
+}
+.thread-slots i:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.thread-slots i:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.thread-slots i:nth-child(4) {
+  animation-delay: 0.9s;
+}
+@keyframes flow-stream {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: calc(100% - 7px);
+    opacity: 0;
+  }
+}
+@keyframes flow-wait {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  40%,
+  85% {
+    top: calc(50% - 4px);
+    opacity: 1;
+  }
+  100% {
+    top: calc(50% - 4px);
+    opacity: 0;
+  }
+}
+@keyframes thread-busy {
+  0%,
+  100% {
+    background: #e9d9b5;
+  }
+  50% {
+    background: #b48a3c;
+  }
+}
 .case-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1491,5 +1609,8 @@ dd {
   *:after {
     transition: none !important;
     animation: none !important;
+  }
+  .flow-view .flow-line::before {
+    display: none;
   }
 }
