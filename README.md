@@ -37,6 +37,10 @@ python3 -m http.server 8000
 
 개인 프로젝트와 개발 기록은 정적 HTML로 관리합니다. GitHub API를 브라우저에서 호출하지 않으며 인증 정보가 필요하지 않습니다.
 
+homeTrend 카드의 LIVE 패널은 같은 도메인에 공개된 `/homeTrend/data/meta.json`(마지막 갱신 시각·빌드 번호)과 `/homeTrend/data/changes.json`(이번 갱신에서 새로 확인·취소된 거래)을 읽어 표시합니다. Projects 영역에 가까워질 때만 불러오고, 마지막 갱신이 30시간을 넘으면 '갱신 지연'으로 표시합니다. 파일을 불러오지 못하거나 형식이 바뀌면 패널을 숨깁니다. `python3 -m http.server` 로컬 미리보기에는 homeTrend 데이터가 없어 패널이 보이지 않습니다. homeTrend의 데이터 형식이 바뀌면 `assets/portfolio/main.js`의 `loadLiveStatus`를 함께 고칩니다.
+
+CASE 03은 원인을 좁혀간 과정을 장애 회고 로그(`OBSERVE → HYPOTHESIS → COMPARE → ROOT CAUSE → FIX → VERIFY`)로 보여 줍니다. 문구는 기존 사례 설명과 펼침 내용만 옮겼으며 새 사실을 추가하지 않았습니다.
+
 - 대상: 공개 저장소 [homeTrend](https://github.com/Thirdsense3/homeTrend), 비공개 개인 프로젝트 `invest_quant`와 `lotto-random`의 이름·개요
 - 확인일: 2026-10-28. README, package.json, 로드맵과 PR #28·#31·#33을 대조했습니다.
 - 개발 기록은 PR 번호와 작업 내용만 소개합니다. 자동 갱신되지 않는 OPEN/MERGED 상태는 표시하지 않으며, 링크에서 최신 진행 상태를 확인할 수 있습니다.
