@@ -41,6 +41,9 @@ function formatKst(date) {
   return `${parts.month}.${parts.day} (${parts.weekday}) ${parts.hour}:${parts.minute}`;
 }
 
+// homeTrend의 changes.json 날짜와 같은 KST YYYY-MM-DD 형식
+const kstDate = (date) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(date);
+
 async function loadLiveStatus() {
   const field = (name) => livePanel.querySelector(`[data-live="${name}"]`);
   const count = (n) => n.toLocaleString('ko-KR');
@@ -61,11 +64,18 @@ async function loadLiveStatus() {
     try {
       const changes = await fetchJson('/homeTrend/data/changes.json');
       if (changes.status !== 'ok' || changes.no !== meta.buildNo) throw new Error('changes mismatch');
-      const items = changes.items.filter((item) => item.b === changes.no);
-      const added = items.filter((item) => item.type === 'new');
-      const regions = new Set(added.map((item) => item.code)).size;
-      field('added').textContent = `${count(added.length)}건 · ${regions}개 지역`;
-      field('removed').textContent = `${count(items.filter((item) => item.type === 'del').length)}건`;
+      // items는 지역마다 일반 신규 거래를 일부만 남긴 화면용 피드라서, 건수는 regions의 그날 누적값을 더한다
+      const regions = Object.values(changes.regions);
+      const sum = (key) => regions.reduce((total, region) => total + (region[key] || 0), 0);
+      const addedRegions = regions.filter((region) => region.added > 0).length;
+      field('added').textContent = `${count(sum('added'))}건 · ${addedRegions}개 지역`;
+      field('removed').textContent = `${count(sum('removed'))}건`;
+      const [, month, day] = changes.date.split('-');
+      if (changes.date !== kstDate(new Date())) {
+        livePanel.querySelectorAll('[data-live="day"]').forEach((label) => {
+          label.textContent = `${month}.${day}`;
+        });
+      }
     } catch {
       livePanel.querySelectorAll('[data-live-row]').forEach((row) => row.remove());
     }
